@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أكاديمية الأبطال لكرة القدم</title>
+
+<style>
+:root {
+  --black:#07100b;
+  --green:#16c653;
+  --white:#ffffff;
+  --panel:#14251a;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Tahoma,Arial,sans-serif;
+  background:var(--black);
+  color:white;
+  line-height:1.8;
+}
+.container{width:92%;max-width:1150px;margin:auto}
+header{
+  background:#0c1710;
+  border-bottom:2px solid var(--green);
+  position:sticky;top:0;z-index:10;
+}
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 0;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.logo{font-size:23px;font-weight:bold;color:var(--green)}
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:5px 8px;
+}
+nav a:hover{color:var(--green)}
+.hero{
+  padding:65px 0;
+  background:linear-gradient(120deg,#07100b,#153b21);
+  text-align:center;
+}
+.hero h1{font-size:42px;margin:10px}
+.hero h1 span{color:var(--green)}
+.hero p{color:#ddd}
+.coach{
+  width:230px;height:230px;
+  object-fit:cover;
+  border-radius:50%;
+  border:6px solid var(--green);
+  box-shadow:0 0 25px #16c65366;
+}
+.btn{
+  display:inline-block;
+  background:var(--green);
+  color:#061008;
+  padding:12px 23px;
+  border:0;border-radius:10px;
+  font-weight:bold;
+  cursor:pointer;
+  text-decoration:none;
+}
+.btn:hover{background:white}
+section{padding:55px 0}
+.title{
+  text-align:center;
+  color:var(--green);
+  font-size:30px;
+  margin-bottom:30px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+}
+.card{
+  background:var(--panel);
+  padding:22px;
+  border:1px solid #285b38;
+  border-radius:16px;
+  text-align:center;
+}
+.card h3{color:var(--green)}
+.card .emoji{font-size:35px}
+.price{font-size:30px;color:var(--green);font-weight:bold}
+.price small{font-size:14px;color:white}
+.card ul{text-align:right}
+form{
+  background:var(--panel);
+  padding:25px;
+  border-radius:15px;
+  max-width:800px;
+  margin:auto;
+}
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+label{display:block;margin-bottom:5px}
+input,select,textarea{
+  width:100%;
+  padding:12px;
+  border:1px solid #356744;
+  border-radius:9px;
+  background:#08140c;
+  color:white;
+  font-size:15px;
+}
+input:focus,select:focus,textarea:focus{
+  outline:2px solid var(--green);
+}
+.full{grid-column:1/-1}
+.notice{
+  display:none;
+  background:#174b27;
+  padding:12px;
+  border-radius:10px;
+  margin-bottom:15px;
+}
+.admin{
+  background:#101d14;
+  padding:20px;
+  border-radius:15px;
+}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:650px}
+th,td{
+  border-bottom:1px solid #34513c;
+  padding:12px;text-align:right;
+}
+th{color:var(--green)}
+footer{
+  background:#020704;
+  text-align:center;
+  padding:30px;
+  border-top:2px solid var(--green);
+}
+.whatsapp{
+  position:fixed;
+  bottom:20px;left:15px;
+  background:#20c965;
+  color:#001b08;
+  padding:12px 18px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+  z-index:20;
+}
+.hidden{display:none}
+@media(max-width:600px){
+  .hero h1{font-size:30px}
+  .form-grid{grid-template-columns:1fr}
+  .full{grid-column:auto}
+  nav{justify-content:center}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<nav>
+<div class="logo">🏆 أكاديمية الأبطال</div>
+<div>
+<a href="#home">الرئيسية</a>
+<a href="#about">عن الأكاديمية</a>
+<a href="#training">التدريب</a>
+<a href="#prices">الاشتراكات</a>
+<a href="#register">التسجيل</a>
+<a href="#admin">الإدارة</a>
+</div>
+</nav>
+</div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+<div class="container">
+<img class="coach" src="coach.png" alt="صورة المدرب">
+<h1>أكاديمية <span>الأبطال</span></h1>
+<h2>Champions Football Academy</h2>
+<p>نصنع الأبطال ونكتشف المواهب ونطور مهارات لاعبي كرة القدم.</p>
+<h3>تحت إشراف الكابتن حمدي حسن صابر</h3>
+<p>📍 طما – محافظة سوهاج</p>
+<a class="btn" href="#register">سجل الآن</a>
+<a class="btn" href="#prices">شاهد الاشتراكات</a>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+<h2 class="title">عن أكاديمية الأبطال</h2>
+<div class="grid">
+<div class="card">
+<div class="emoji">🏆</div>
+<h3>رؤيتنا</h3>
+<p>اكتشاف المواهب وصناعة جيل رياضي متميز.</p>
+</div>
+<div class="card">
+<div class="emoji">⚽</div>
+<h3>هدفنا</h3>
+<p>تطوير مهارات اللاعبين وتعليمهم أساسيات كرة القدم.</p>
+</div>
+<div class="card">
+<div class="emoji">👨‍🏫</div>
+<h3>المدرب</h3>
+<p>الكابتن حمدي حسن صابر.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="training" style="background:#0d1911">
+<div class="container">
+<h2 class="title">أقسام التدريب</h2>
+<div class="grid">
+
+<div class="card">
+<div class="emoji">⚽</div>
+<h3>تدريب الهجوم</h3>
+<p>التسديد والتحرك بدون كرة وإنهاء الهجمات.</p>
+</div>
+
+<div class="card">
+<div class="emoji">🛡️</div>
+<h3>تدريب الدفاع</h3>
+<p>التمركز والتغطية وقطع الكرات.</p>
+</div>
+
+<div class="card">
+<div class="emoji">🎯</div>
+<h3>تدريب الوسط</h3>
+<p>التمرير والاستلام وبناء اللعب.</p>
+</div>
+
+<div class="card">
+<div class="emoji">🧤</div>
+<h3>حراس المرمى</h3>
+<p>التصدي للكرات والتمركز ورد الفعل.</p>
+</div>
+
+<div class="card">
+<div class="emoji">🏃</div>
+<h3>اللياقة البدنية</h3>
+<p>تطوير الحركة والتوازن والتحمل بطريقة مناسبة للعمر.</p>
+</div>
+
+<div class="card">
+<div class="emoji">🩹</div>
+<h3>الإسعافات الأولية</h3>
+<p>تعلم أساسيات التصرف الآمن عند الإصابات.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="prices">
+<div class="container">
+<h2 class="title">الاشتراكات والأسعار</h2>
+<div class="grid">
+
+<div class="card">
+<h3>حصة واحدة</h3>
+<div class="price">20 <small>جنيه</small></div>
+<ul>
+<li>حضور حصة تدريبية</li>
+<li>التعرف على التدريب</li>
+</ul>
+<a class="btn" href="#register" onclick="choosePlan('حصة واحدة')">اشترك الآن</a>
+</div>
+
+<div class="card">
+<h3>اشتراك شهر</h3>
+<div class="price">250 <small>جنيه</small></div>
+<ul>
+<li>تدريبات منتظمة</li>
+<li>تقييم مستوى اللاعب</li>
+</ul>
+<a class="btn" href="#register" onclick="choosePlan('شهر')">اشترك الآن</a>
+</div>
+
+<div class="card">
+<h3>اشتراك 3 شهور</h3>
+<div class="price">350 <small>جنيه</small></div>
+<ul>
+<li>خطة تدريب مستمرة</li>
+<li>تقييم شهري</li>
+<li>شهادة مشاركة</li>
+</ul>
+<a class="btn" href="#register" onclick="choosePlan('3 شهور')">اشترك الآن</a>
+</div>
+
+<div class="card">
+<h3>اشتراك 6 شهور</h3>
+<div class="price">700 <small>جنيه</small></div>
+<ul>
+<li>تدريبات متقدمة</li>
+<li>مباريات تجريبية</li>
+</ul>
+<a class="btn" href="#register" onclick="choosePlan('6 شهور')">اشترك الآن</a>
+</div>
+
+<div class="card">
+<h3>اشتراك سنة</h3>
+<div class="price">1200 <small>جنيه</small></div>
+<ul>
+<li>برنامج تدريبي متكامل</li>
+<li>متابعة مستمرة</li>
+<li>فرص المشاركة في البطولات</li>
+</ul>
+<a class="btn" href="#register" onclick="choosePlan('سنة')">اشترك الآن</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="register" style="background:#0d1911">
+<div class="container">
+<h2 class="title">تسجيل لاعب جديد</h2>
+
+<form id="playerForm">
+<div id="success" class="notice">
+تم استلام طلب التسجيل بنجاح!
+</div>
+
+<div class="form-grid">
+
+<div>
+<label>اسم اللاعب بالكامل *</label>
+<input name="name" required placeholder="اسم اللاعب">
+</div>
+
+<div>
+<label>العمر *</label>
+<input name="age" type="number" min="4" required>
+</div>
+
+<div>
+<label>تاريخ الميلاد</label>
+<input name="birth" type="date">
+</div>
+
+<div>
+<label>رقم اللاعب أو ولي الأمر *</label>
+<input name="phone" type="tel" required placeholder="01xxxxxxxxx">
+</div>
+
+<div>
+<label>المنطقة والعنوان *</label>
+<input name="address" required>
+</div>
+
+<div>
+<label>المركز</label>
+<select name="position">
+<option>اختر المركز</option>
+<option>حارس مرمى</option>
+<option>دفاع</option>
+<option>وسط</option>
+<option>هجوم</option>
+</select>
+</div>
+
+<div>
+<label>القسم التدريبي</label>
+<select name="course">
+<option>تدريب عام</option>
+<option>الهجوم</option>
+<option>الدفاع</option>
+<option>خط الوسط</option>
+<option>حراس المرمى</option>
+<option>اللياقة البدنية</option>
+<option>الإسعافات الأولية</option>
+</select>
+</div>
+
+<div>
+<label>الاشتراك *</label>
+<select name="plan" id="plan" required>
+<option value="">اختر الاشتراك</option>
+<option>حصة واحدة</option>
+<option>شهر</option>
+<option>3 شهور</option>
+<option>6 شهور</option>
+<option>سنة</option>
+</select>
+</div>
+
+<div>
+<label>طريقة الدفع</label>
+<select name="payment">
+<option>كاش داخل الأكاديمية</option>
+<option>إنستاباي</option>
+<option>محفظة إلكترونية</option>
+<option>بطاقة بنكية</option>
+</select>
+</div>
+
+<div>
+<label>صورة اللاعب</label>
+<input type="file" name="photo" accept="image/*">
+</div>
+
+<div class="full">
+<label>اليوم والساعة المفضلان</label>
+<input name="preferred" placeholder="مثال: السبت الساعة 5">
+</div>
+
+<div class="full">
+<label>ملاحظات</label>
+<textarea name="notes" rows="3"></textarea>
+</div>
+
+<div class="full">
+<button class="btn" type="submit">إرسال طلب التسجيل</button>
+</div>
+
+</div>
+</form>
+</div>
+</section>
+
+<section id="admin">
+<div class="container">
+<h2 class="title">لوحة تحكم الإدارة</h2>
+<div class="admin">
+
+<div id="loginBox">
+<h3>دخول الإدارة</h3>
+<input id="password" type="password" placeholder="كلمة المرور">
+<br><br>
+<button class="btn" onclick="login()">دخول</button>
+<p>كلمة المرور التجريبية: 1234</p>
+</div>
+
+<div id="dashboard" class="hidden">
+<h3>إدارة اللاعبين</h3>
+<p>عدد اللاعبين: <b id="count">0</b></p>
+<button class="btn" onclick="exportCSV()">تنزيل بيانات اللاعبين</button>
+<button class="btn" onclick="logout()">خروج</button>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>الاسم</th>
+<th>الهاتف</th>
+<th>الاشتراك</th>
+<th>الموعد</th>
+<th>الحالة</th>
+<th>إجراء</th>
+</tr>
+</thead>
+<tbody id="players"></tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<h2>🏆 أكاديمية الأبطال</h2>
+<p>تحت إشراف الكابتن حمدي حسن صابر</p>
+<p>📍 طما – سوهاج</p>
+<p>للتواصل: 01035752041</p>
+<p>© جميع الحقوق محفوظة لأكاديمية الأبطال</p>
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/201035752041"
+target="_blank">
+تواصل واتساب
+</a>
+
+<script>
+const KEY = "champions_players";
+
+function getPlayers(){
+  return JSON.parse(localStorage.getItem(KEY) || "[]");
+}
+
+function savePlayers(data){
+  localStorage.setItem(KEY, JSON.stringify(data));
+}
+
+function choosePlan(plan){
+  document.getElementById("plan").value = plan;
+}
+
+document.getElementById("playerForm").addEventListener("submit",function(e){
+  e.preventDefault();
+
+  const form = e.target;
+  const data = Object.fromEntries(new FormData(form).entries());
+
+  delete data.photo;
+
+  data.id = Date.now();
+  data.status = "في انتظار المراجعة";
+  data.date = new Date().toLocaleDateString("ar-EG");
+
+  const players = getPlayers();
+  players.unshift(data);
+  savePlayers(players);
+
+  document.getElementById("success").style.display = "block";
+  form.reset();
+});
+
+function login(){
+  const pass = document.getElementById("password").value;
+
+  if(pass === "1234"){
+    document.getElementById("loginBox").classList.add("hidden");
+    document.getElementById("dashboard").classList.remove("hidden");
+    render();
+  }else{
+    alert("كلمة المرور غير صحيحة");
+  }
+}
+
+function logout(){
+  document.getElementById("dashboard").classList.add("hidden");
+  document.getElementById("loginBox").classList.remove("hidden");
+  document.getElementById("password").value = "";
+}
+
+function render(){
+  const data = getPlayers();
+
+  document.getElementById("count").textContent = data.length;
+
+  document.getElementById("players").innerHTML =
+  data.map(p => `
+    <tr>
+      <td>${safe(p.name)}</td>
+      <td>${safe(p.phone)}</td>
+      <td>${safe(p.plan)}</td>
+      <td>${safe(p.preferred || "-")}</td>
+      <td>${safe(p.status)}</td>
+      <td>
+        <button class="btn" onclick="confirmPlayer(${p.id})">تأكيد</button>
+        <button class="btn" onclick="deletePlayer(${p.id})">حذف</button>
+      </td>
+    </tr>
+  `).join("") || "<tr><td colspan='6'>لا يوجد لاعبون حتى الآن</td></tr>";
+}
+
+function safe(value){
+  return String(value ?? "").replace(/[&<>"']/g, c => ({
+    "&":"&amp;",
+    "<":"&lt;",
+    ">":"&gt;",
+    '"':"&quot;",
+    "'":"&#39;"
+  })[c]);
+}
+
+function confirmPlayer(id){
+  const data = getPlayers();
+  const player = data.find(p => p.id === id);
+
+  if(player) player.status = "تم التأكيد";
+
+  savePlayers(data);
+  render();
+}
+
+function deletePlayer(id){
+  if(!confirm("هل تريد حذف اللاعب؟")) return;
+
+  savePlayers(getPlayers().filter(p => p.id !== id));
+  render();
+}
+
+function exportCSV(){
+  const data = getPlayers();
+
+  if(!data.length){
+    alert("لا توجد بيانات");
+    return;
+  }
+
+  const fields = [
+    "name","age","phone","address",
+    "position","course","plan",
+    "payment","preferred","status"
+  ];
+
+  const csv = "\uFEFF" +
+    [fields.join(","),
+    ...data.map(p => fields.map(k =>
+      '"' + String(p[k] ?? "").replace(/"/g,'""') + '"'
+    ).join(","))].join("\n");
+
+  const file = new Blob([csv],{
+    type:"text/csv;charset=utf-8"
+  });
+
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(file);
+  link.download = "Champions-Players.csv";
+  link.click();
+  URL.revokeObjectURL(link.href);
+}
+</script>
+
+</body>
+</html>
